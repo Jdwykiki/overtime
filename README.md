@@ -16,3 +16,6 @@ x AdminUser -> STI
 
 ## UI:
 - Bootstrap -> formatting
+
+## Refactoring TODOS
+- Refactor user association
