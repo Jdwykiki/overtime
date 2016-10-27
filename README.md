@@ -16,6 +16,8 @@ x AdminUser -> STI
 
 ## UI:
 x Bootstrap -> formatting
+- Icons from Font Awesome
+- Update the styles for forms
 
 ## Refactoring TODOS
 - Refactor user association
