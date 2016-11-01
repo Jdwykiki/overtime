@@ -11,4 +11,3 @@ puts "1 Admin User created"
 end
 
 puts "100 Posts have been created"
-
