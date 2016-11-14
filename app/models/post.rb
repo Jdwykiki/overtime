@@ -10,15 +10,15 @@ class Post < ActiveRecord::Base
 	after_save :confirm_audit_log, if: :submitted?
 	after_save :un_confirm_audit_log, if: :rejected?
 
-private
+	private
 
-  def confirm_audit_log
-    audit_log = AuditLog.where(user_id: self.user_id, start_date: (self.date - 7.days..self.date)).last
-    audit_log.confirmed! if audit_log
-  end
+		def confirm_audit_log
+			audit_log = AuditLog.where(user_id: self.user_id, start_date: (self.date - 7.days..self.date)).last
+			audit_log.confirmed! if audit_log
+		end
 
-  def un_confirm_audit_log
-    audit_log = AuditLog.where(user_id: self.user_id, start_date: (self.date - 7.days..self.date)).last
-    audit_log.pending! if audit_log
-  end
+		def un_confirm_audit_log
+			audit_log = AuditLog.where(user_id: self.user_id, start_date: (self.date - 7.days..self.date)).last
+			audit_log.pending! if audit_log
+		end
 end

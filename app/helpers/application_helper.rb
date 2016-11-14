@@ -8,11 +8,11 @@ module ApplicationHelper
 	end
 
 	def employee?
-	  current_user.type == 'Employee'
+		current_user.type == 'Employee'
 	end
 
 	def admin?
-	  admin_types.include?(current_user.type)
+		admin_types.include?(current_user.type)
 	end
 
 	def status_label status
